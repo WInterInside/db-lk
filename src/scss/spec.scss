@@ -1,0 +1,69 @@
+.specification {
+	margin: 1rem 0;
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+
+		& a {
+			font-family: Nunito Sans;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 19.1px;
+			text-align: center;
+			text-decoration-line: underline;
+			text-decoration-style: solid;
+			color: #289A9C;
+			transition: color .3s;
+			
+			@media (hover: hover) {
+				&:hover {
+					color: #157778;
+				}
+			}
+		}	
+
+		@media only screen and (max-width: 1000px) {
+			min-width: 1000px;
+		}
+	}
+
+	thead {
+		color: #fff;
+		background-color: #34B7B9;
+	}
+
+	th, td {
+		padding: 14px;
+		text-align: left;
+	}
+
+	td {
+		padding: 14px;
+		text-align: left;
+		border-bottom: 1px solid #ddd;
+	}
+	
+	tr:nth-child(even) {
+		background-color: #F8F8F8;
+	}
+
+	@media only screen and (max-width: 1400px) {
+		th, td {
+			padding: 10px 2px;
+			text-align: left;
+			font-size: 12px;
+			line-height: 16px;
+		}
+	
+		td {
+			padding: 10px 4px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+	}
+
+	@media only screen and (max-width: 900px) {
+		overflow-x: scroll;
+	}
+}

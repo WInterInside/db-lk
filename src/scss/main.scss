@@ -1,0 +1,103 @@
+.main {
+	position: relative;
+	flex-grow: 1;
+	background-color: #68ced0;
+	position: relative;
+
+	&--lc {
+		padding: 50px 0;
+		background-color: #fff;
+
+		& h2 {
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 42px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-grow: 1;
+		height: 100vh;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__bg {
+		pointer-events: none;
+		position: absolute;
+		width: 333px;
+		height: 333px;
+		border-radius: 50%;
+		background-color: #ffffffd8;
+		filter: blur(111px);
+		animation: pulse 1.5s infinite alternate;
+
+		&--1 {
+			top: -100px;
+			right: -100px;
+			width: 400px;
+			height: 200px;
+			filter: blur(44px);
+		}
+
+		&--2 {
+			top: calc(50% - 350px);
+			right: calc(50% - 450px);
+			width: 420px;
+			height: 420px;
+		}
+
+		&--3 {
+			bottom: -50px;
+			right: -100px;
+		}
+
+		&--4 {
+			bottom: -30px;
+			left: -100px;
+		}
+
+		&--5 {
+			top: -200px;
+			left: -150px;
+		}
+	}
+
+	&__back {
+		max-width: 200px;
+		padding: 16px;
+		border: 1px solid #68ced0;
+		display: flex;
+		gap: 16px;
+		justify-content: center;
+		align-items: center;
+		transition: background-color .3s;
+
+		& span {
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 26px;
+			text-align: center;
+			color: #289A9C;
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: #eff1f1;
+			}
+		}
+	}
+}
+
+@keyframes pulse {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(.5);
+	}
+}
